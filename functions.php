@@ -239,7 +239,7 @@ function dsi_scripts() {
 
     }*/
 
-	wp_enqueue_script( 'dsi-scuole-js', get_template_directory_uri() . '/assets/js/scuole.js', array(), false, true);
+	wp_enqueue_script( 'dsi-scuole-js', get_template_directory_uri() . '/assets/js/scuole.js', ['jquery'], false, true);
 
 	if(is_singular(array("evento","scheda_progetto")) || is_home() || is_archive() ){
 		wp_enqueue_script( 'dsi-clndr-json2', get_template_directory_uri() . '/assets/js/components/clndr/json2.js', array(), false, false);
