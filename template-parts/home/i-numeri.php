@@ -3,7 +3,8 @@ global $post;
 
 $studenti = dsi_get_option( "studenti", "la_scuola" );
 $classi = dsi_get_option( "classi", "la_scuola" );
-$media = intval($studenti / $classi);
+if ($studenti && $classi) {
+    $media = intval($studenti / $classi);
 ?>
 
 	<section class="section section-padding py-5 bg-gray-light">
@@ -58,3 +59,5 @@ $media = intval($studenti / $classi);
 			?>
 		</div><!-- /container -->
 	</section><!-- /section -->
+<?php
+}
